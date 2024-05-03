@@ -1,0 +1,319 @@
+/* Dando um reset geral no meu css */
+* {
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CLASSES CSS PARA A PAGINA INDEX.HTML */
+.selecao {
+    background-image: url("../img/fundaoo.gif");
+}
+
+.uou {
+    margin: 1.5em;
+    font-family: Lucida Console;
+    font-size: 50px;
+    letter-spacing: 9px;
+    word-spacing: 0px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    -webkit-box-shadow: 0px 0px 22px 7px rgba(255, 0, 255, 0.75);
+    -moz-box-shadow: 0px 0px 22px 7px rgba(255, 0, 255, 0.75);
+    box-shadow: 0px 0px 22px 7px rgba(255, 0, 255, 0.75);
+
+}
+
+.personagem {
+    width: 150px;
+    margin: 2em;
+    height: 150px;
+}
+
+.titulo {
+    color: white;
+}
+
+/* FIM DAS CLASSES CSS PARA A PAGINA INDEX.HTML */
+
+/* CLASSES CSS PARA A PAGINA JOGO.HTML */
+.max-width {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 10%;
+    background-color: #FFF;
+    box-shadow: 0 0 5px #FFF;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-family: 'Segoe UI';
+    font-size: 1.1em;
+    transition: all .5s;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+button:hover {
+    background-color: #a1c0d1;
+}
+
+button:active {
+    background-color: #111;
+}
+
+.bg-green {
+    background-color: #b2d1a1;
+}
+
+.bg-yellow {
+    background-color: #d1cba1;
+}
+
+.bg-red {
+    background-color: #d1a1a1;
+}
+
+.bodyjogo {
+    background: linear-gradient(rgba(65, 139, 12, 0.948), rgba(67, 128, 25, 0.948), rgba(60, 138, 8, 0.948));
+    height: 500px;
+}
+
+.palco-game {
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden; /* ESCONDER AS BARRAS DE ROLAGEM */
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.cano {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: cano-animation 2s infinite linear;
+    /*aqui definimos através do infinit que ele fique constante e linear para que seja velocidade constante*/
+}
+
+/* Animação de frames para o elemento cano */
+@keyframes cano-animation {
+    from {
+        right: -10px;
+        /* aqui se definirmos o valor negativo da largura do objeto ele vai começar antes da área definida do jogo */
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+
+    }
+}
+
+.tartaruga {
+    position: absolute;
+    width: 50px;
+    top: 200px;
+    animation: tartaruga-animation 3s infinite linear;
+}
+
+/* Animação de frames para o elemento tartaruga */
+@keyframes tartaruga-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.pulo {
+    animation: mario-animation 600ms ease-in; /* especifica um efeito de transição com início lento */
+}
+
+/* Animação de frames para o elemento mario */
+@keyframes mario-animation {
+    0% {
+        bottom: 0;
+    }
+
+    10% {
+        bottom: 40px;
+    }
+
+    20% {
+        bottom: 80px;
+    }
+
+    30% {
+        bottom: 120px;
+    }
+
+    40% {
+        bottom: 160px;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+
+    59% {
+        bottom: 200px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    65% {
+        bottom: 160px;
+    }
+
+    70% {
+        bottom: 140px;
+    }
+
+    75% {
+        bottom: 120px;
+    }
+
+    80% {
+        bottom: 100px;
+    }
+
+    85% {
+        bottom: 80px;
+    }
+
+    90% {
+        bottom: 60px;
+    }
+
+    95% {
+        bottom: 40px;
+    }
+
+    97% {
+        bottom: 20px;
+    }
+
+    100% {
+        bottom: 10px;
+    }
+}
+
+@keyframes morte-animation {
+    0% {
+        bottom: 0;
+    }
+
+    10% {
+        bottom: 10px;
+    }
+
+    20% {
+        bottom: 20px;
+    }
+
+    30% {
+        bottom: 30px;
+    }
+
+    40% {
+        bottom: 40px;
+    }
+
+    50% {
+        bottom: 30px;
+    }
+
+    59% {
+        bottom: 20px;
+    }
+
+    60% {
+        bottom: 10px;
+    }
+
+    65% {
+        bottom: 0px;
+    }
+
+    70% {
+        bottom: -10px;
+    }
+
+    75% {
+        bottom: -20px;
+    }
+
+    80% {
+        bottom: -30px;
+    }
+
+    85% {
+        bottom: -50px;
+    }
+
+    90% {
+        bottom: -70px;
+    }
+
+    95% {
+        bottom: -90px;
+    }
+
+    97% {
+        bottom: -110px;
+    }
+
+    100% {
+        bottom: -130px;
+    }
+}
+
+.nuvem {
+    position: absolute;
+    width: 550px;
+    animation: nuvem-animation 10s infinite linear;
+}
+
+/* Animação de frames para o elemento nuvem */
+@keyframes nuvem-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.botao {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
