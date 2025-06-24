@@ -11,12 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/grama_realista.css">
     <title>MIXED RUNNER</title>
 </head>
 
 <body class="bodyjogo" onload="start(), theme.play();">
     <!-- onload é para quando carregar a pagina ja "startar" as funçoes, start() é para iniciar os pontos do jogo, e o play() iniciar a musica tema do jogo -->
-    <div class="palco-game">
+    <div class="palco-game grama-realista">
         <img src="img/nuvem.png" class="nuvem">
         <img src="img/mario.gif" class="mario" id="image"> <!--  Vamos definir uma classe-->
         <img src="img/cano.png" class="cano">
@@ -39,11 +40,10 @@
 <script src="js/script.js"></script>
 
 <script>
-    const queryString = window.location.search;  // FUNÇÃO NATIVA DO JS, objetivo dela é fazer uma Pesquisa por uma string em uma URL
-    const urlParams = new URLSearchParams(queryString); //FUNÇÃO NATIVO DO JS, objetivo dela é fazer uma pesquisa por um parametro na URL e coletar o que esta após esse parametro
-    const p = urlParams.get('p') //Criando uma constante "p" que é o meu parametro que vai armazenar o nome do meu personagem
-
-    document.getElementById("image").src = "img/" + p + '.gif'; //mudando o src do elemento com ID de "image"
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const p = urlParams.get('p');
+    document.getElementById("image").src = "img/" + p + '.gif';
 </script>
 
 </html>
