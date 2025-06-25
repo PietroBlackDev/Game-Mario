@@ -9,10 +9,16 @@
 /* CLASSES CSS PARA A PAGINA INDEX.HTML */
 .selecao {
     background-image: url("../img/fundaoo.gif");
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    
+overflow: hidden;
+
 }
 
 .uou {
-    margin: 1.5em;
+    margin: 1em;
     font-family: Lucida Console;
     font-size: 50px;
     letter-spacing: 9px;
@@ -104,195 +110,78 @@ button:active {
 }
 
 .cano {
-    position: absolute;
-    bottom: 0;
-    width: 80px;
-    animation: cano-animation 2s infinite linear;
-    /*aqui definimos através do infinit que ele fique constante e linear para que seja velocidade constante*/
+  position: absolute;
+  bottom: 0;
+  width: 80px;
 }
 
-/* Animação de frames para o elemento cano */
 @keyframes cano-animation {
-    from {
-        right: -10px;
-        /* aqui se definirmos o valor negativo da largura do objeto ele vai começar antes da área definida do jogo */
-        right: -80px;
-    }
-
-    to {
-        right: 100%;
-
-    }
+  from {
+    right: -100px; /* começa bem fora da tela */
+  }
+  to {
+    right: 100%;
+  }
 }
+
 
 .tartaruga {
-    position: absolute;
-    width: 50px;
-    top: 200px;
-    animation: tartaruga-animation 3s infinite linear;
+  position: absolute;
+  width: 50px;
+  top: 200px;
 }
 
-/* Animação de frames para o elemento tartaruga */
 @keyframes tartaruga-animation {
-    from {
-        right: -550px;
-    }
-
-    to {
-        right: 100%;
-    }
+  from {
+    right: -100px;
+  }
+  to {
+    right: 100%;
+  }
 }
 
 .mario {
-    width: 150px;
+    width: 130px;
     position: absolute;
     bottom: 0;
 }
 
 .pulo {
-    animation: mario-animation 600ms ease-in; /* especifica um efeito de transição com início lento */
+  animation: mario-animation 1s ease-in-out;
+  position: absolute;
 }
 
 /* Animação de frames para o elemento mario */
 @keyframes mario-animation {
-    0% {
-        bottom: 0;
-    }
+  0% {
+    bottom: 0;
+  }
 
-    10% {
-        bottom: 40px;
-    }
+  30% {
+    bottom: 180px;
+  }
 
-    20% {
-        bottom: 80px;
-    }
+  50% {
+    bottom: 200px;
+  }
 
-    30% {
-        bottom: 120px;
-    }
+  65% {
+    bottom: 160px;
+  }
 
-    40% {
-        bottom: 160px;
-    }
+  75% {
+    bottom: 100px;
+  }
 
-    50% {
-        bottom: 200px;
-    }
+  85% {
+    bottom: 50px;
+  }
 
-    59% {
-        bottom: 200px;
-    }
-
-    60% {
-        bottom: 180px;
-    }
-
-    65% {
-        bottom: 160px;
-    }
-
-    70% {
-        bottom: 140px;
-    }
-
-    75% {
-        bottom: 120px;
-    }
-
-    80% {
-        bottom: 100px;
-    }
-
-    85% {
-        bottom: 80px;
-    }
-
-    90% {
-        bottom: 60px;
-    }
-
-    95% {
-        bottom: 40px;
-    }
-
-    97% {
-        bottom: 20px;
-    }
-
-    100% {
-        bottom: 10px;
-    }
+  100% {
+    bottom: 0;
+  }
 }
 
-@keyframes morte-animation {
-    0% {
-        bottom: 0;
-    }
-
-    10% {
-        bottom: 10px;
-    }
-
-    20% {
-        bottom: 20px;
-    }
-
-    30% {
-        bottom: 30px;
-    }
-
-    40% {
-        bottom: 40px;
-    }
-
-    50% {
-        bottom: 30px;
-    }
-
-    59% {
-        bottom: 20px;
-    }
-
-    60% {
-        bottom: 10px;
-    }
-
-    65% {
-        bottom: 0px;
-    }
-
-    70% {
-        bottom: -10px;
-    }
-
-    75% {
-        bottom: -20px;
-    }
-
-    80% {
-        bottom: -30px;
-    }
-
-    85% {
-        bottom: -50px;
-    }
-
-    90% {
-        bottom: -70px;
-    }
-
-    95% {
-        bottom: -90px;
-    }
-
-    97% {
-        bottom: -110px;
-    }
-
-    100% {
-        bottom: -130px;
-    }
-}
 
 .nuvem {
     position: absolute;
@@ -317,3 +206,10 @@ button:active {
     right: 1em;
 }
 
+
+
+.cano, .tartaruga {
+  position: absolute;
+  bottom: 0;
+  display: none; /* começa invisível */
+}
